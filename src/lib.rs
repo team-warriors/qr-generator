@@ -59,10 +59,9 @@ mod tests {
 
     #[test]
     fn test_render() {
-        // content QrCode
         let content = "https://ralali.com/billing".to_string();
-        // you can custom name
-        let name = "random".to_string();
+        let name = "name_of_image".to_string();
+
         generate(content, name).unwrap();
     }
 
