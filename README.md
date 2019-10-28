@@ -22,7 +22,7 @@ fn main() {
   let content = "https://example.com/path".to_string();
   let name = "name_of_image".to_string();
 
-  qr_generator::generate(content, name).unwrap(); // to generate qr-code image.
+  qr_generator::generate(content, name).unwrap(); // to generate qr-code to image.
 }
 ```
 
