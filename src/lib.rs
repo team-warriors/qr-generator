@@ -59,7 +59,7 @@ mod tests {
 
     #[test]
     fn test_render() {
-        let content = "https://ralali.com/billing".to_string();
+        let content = "https://example.com/path".to_string();
         let name = "name_of_image".to_string();
 
         generate(content, name).unwrap();
