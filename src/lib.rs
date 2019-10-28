@@ -58,7 +58,7 @@ mod tests {
     use self::calculate_hash;
 
     #[test]
-    fn test_render() {
+    fn test_generate() {
         let content = "https://example.com/path".to_string();
         let name = "name_of_image".to_string();
 
