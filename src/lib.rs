@@ -36,16 +36,15 @@ pub fn generate(content: String, name: String) -> std::io::Result<()> {
     let mut image_path: String = get_path;
     let add_suffix_path = String::from("/");
     image_path.push_str(&add_suffix_path);
-
     let generate_image_hash = ImageName {
         image_name: name,
     };
     let generate_image_to_hash = calculate_hash(&generate_image_hash).to_string();
     let convert_image_to_string: String = generate_image_to_hash.to_owned();
     let image_extension_to_string: String = String::from(".png");
-
     image_path.push_str(&convert_image_to_string);
     image_path.push_str(&image_extension_to_string);
+
     image.save(image_path).unwrap();
 
     Ok(())
@@ -62,7 +61,7 @@ mod tests {
         let content = "https://example.com/path".to_string();
         let name = "name_of_image".to_string();
 
-        generate(content, name).unwrap();
+        assert_eq!(generate(content, name).unwrap(), ())
     }
 
     #[test]
