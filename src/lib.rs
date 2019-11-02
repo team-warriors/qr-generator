@@ -6,6 +6,7 @@ use image::Luma;
 use std::collections::hash_map::DefaultHasher;
 use std::hash::{Hash, Hasher};
 use std::env;
+use std::io::Result as IoResult;
 
 pub struct ImageName {
     pub image_name: String,
@@ -23,12 +24,12 @@ pub fn calculate_hash<T: Hash>(t: &T) -> u64 {
     s.finish()
 }
 
-pub fn get_current_path() -> std::io::Result<String> {
+pub fn get_current_path() -> IoResult<String> {
     let path = env::current_dir()?;
     Ok(path.display().to_string())
 }
 
-pub fn generate(content: String, name: String) -> std::io::Result<()> {
+pub fn generate(content: String, name: String) -> IoResult<()> {
     let code = QrCode::new(content).unwrap();
     let image = code.render::<Luma<u8>>().build();
 
