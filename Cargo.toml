@@ -1,11 +1,12 @@
 [package]
 name = "qr-generator"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Adiatma Kamarudin <adiatma.kamaarudin@ralali.com>"]
 edition = "2018"
 license = "MIT"
 description = "QrCode generator with rust"
 repository = "https://github.com/adiatma/qr-generator.git"
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
